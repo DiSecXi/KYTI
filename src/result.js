@@ -27,7 +27,16 @@ export function renderResult(result, userLevels, dimOrder, dimDefs, config) {
   // Intro & 描述
   document.getElementById('result-intro').textContent = primary.intro || ''
   document.getElementById('result-desc').textContent = primary.desc || ''
-
+  // 类型图片（新增）
+  const imgEl = document.getElementById('result-image')
+  if (imgEl) {
+    if (primary.image) {
+      imgEl.src = primary.image
+      imgEl.style.display = 'block'
+    } else {
+      imgEl.style.display = 'none'
+    }
+  }
   // 次要匹配
   const secEl = document.getElementById('result-secondary')
   if (secondary && (mode === 'drunk' || mode === 'fallback')) {
@@ -62,36 +71,18 @@ export function renderResult(result, userLevels, dimOrder, dimDefs, config) {
     detailEl.appendChild(row)
   }
 
-  // TOP 5
-  const topEl = document.getElementById('top-list')
-  topEl.innerHTML = ''
-  const top5 = rankings.slice(0, 5)
-  top5.forEach((t, i) => {
-    const item = document.createElement('div')
-    item.className = 'top-item'
-    item.innerHTML = `
-      <span class="top-rank">#${i + 1}</span>
-      <span class="top-code">${t.code}</span>
-      <span class="top-name">${t.cn}</span>
-      <span class="top-sim">${t.similarity}%</span>
-    `
-    topEl.appendChild(item)
-  })
+
 
   // 免责声明
   document.getElementById('disclaimer').textContent =
     mode === 'normal' ? config.display.funNote : config.display.funNoteSpecial
 
-  // 下载分享图
-  const btnDownload = document.getElementById('btn-download')
-  btnDownload.onclick = () => {
-    generateShareImage(primary, userLevels, dimOrder, dimDefs, mode)
-  }
+
 
   // 复制 AI Agent 命令
   const btnAgent = document.getElementById('btn-agent')
   btnAgent.onclick = () => {
-    const cmd = `git clone https://github.com/pingfanfan/SBTI.git && cd SBTI && npm install && npm run dev`
+    const cmd = `git clone https://github.com/DiSecXi/KYTI.git && cd KYTI && npm install && npm run dev`
     navigator.clipboard.writeText(cmd).then(() => {
       btnAgent.textContent = '已复制!'
       setTimeout(() => { btnAgent.textContent = '复制一键部署命令' }, 2000)

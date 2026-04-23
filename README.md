@@ -1,12 +1,12 @@
-# SBTI 人格测试
+# KYTI 人格测试
 
-> MBTI已经过时，SBTI来了。
+> 如果你也不理解MBTI在测啥，不如来测一下KYTI。
 
 一个开源的娱乐性人格测试项目，基于 B站UP主 [@蛆肉儿串儿](https://space.bilibili.com/417038183) 的原创测试。
 
 ## 在线体验
 
-👉 [点击开始测试](https://pingfanfan.github.io/SBTI/)
+👉 [点击开始测试](https://DiSecXi.github.io/KYTI/)
 
 ## 特性
 
@@ -42,8 +42,8 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/pingfanfan/SBTI.git
-cd SBTI
+git clone https://github.com/DiSecXi/KYTI.git
+cd KYTI
 
 # 安装依赖
 npm install
@@ -159,7 +159,8 @@ npm run build
 ## 致谢
 
 - 原创测试：B站UP主 [@蛆肉儿串儿](https://space.bilibili.com/417038183)（UID: 417038183）
-- 原版地址：[B站SBTI测试页面](https://www.bilibili.com/blackboard/era/VxiCX2CRqcqzPK9F.html)
+- 开源程序提供：https://github.com/pingfanfan
+- 原版地址：[B站SBTI测试页面](https://www.bilibili.com/blackboard/era/WijKT2bWuCJWPg8B.html)
 
 ## 声明
 

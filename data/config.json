@@ -1,18 +1,9 @@
 {
   "scoring": {
     "levelThresholds": {
-      "L": [
-        2,
-        3
-      ],
-      "M": [
-        4,
-        4
-      ],
-      "H": [
-        5,
-        6
-      ]
+      "L": [2, 3],
+      "M": [4, 4],
+      "H": [5, 6]
     },
     "levelNumeric": {
       "L": 1,
@@ -23,11 +14,11 @@
     "fallbackThreshold": 60
   },
   "display": {
-    "title": "SBTI 人格测试",
-    "subtitle": "MBTI已经过时，SBTI来了。",
-    "author": "B站UP主@蛆肉儿串儿 原创",
-    "funNote": "本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、招魂、算命或人生判决书。",
-    "funNoteSpecial": "本测试仅供娱乐。隐藏人格和傻乐兜底都属于作者故意埋的损招，请勿把它当成医学、心理学、相学、命理学或灵异学依据。"
+    "title": "KYTI 人格测试",
+    "subtitle": "如果你也不理解MBTI在测啥，不如来测一下KYTI。",
+    "author": "基于 B站UP主@蛆肉儿串儿 的原创测试 及 GitHub user pingfan 的 SBTI 的开源项目，本项目作者：DiSecXi (Xi YN)（B站UP主@DiSecXi (UID 1312790)）",
+    "funNote": "有关材料学、电化学、量子化学实验手段与计算相关文章、专利指导需求 请联系B站UP主 DiSecXi (UID 1312790)",
+    "funNoteSpecial": "本测试仅供娱乐。存在隐藏人格，但我希望你测不出来。"
   },
   "drinkGate": {
     "questionId": "drink_gate_q1",
